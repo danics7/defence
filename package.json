@@ -1,0 +1,37 @@
+{
+  "name": "astro-farm-defence",
+  "version": "1.0.0",
+  "description": "Electron + Phaser 기반의 데스크톱 게임 Astro Farm Defence",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.2.3",
+    "electron-builder": "^24.6.0"
+  },
+  "dependencies": {
+    "phaser": "^3.60.0"
+  },
+  "build": {
+    "appId": "com.astro.farm.defence",
+    "productName": "Astro Farm Defence",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis", "zip"]
+    }
+  }
+} 
